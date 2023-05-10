@@ -1,0 +1,145 @@
+.part {
+	font-family: var(--font-family, sans-serif);
+	&__container {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+	&__title {
+		text-align: center;
+		color: var(--purple-color);
+		font-size: 50px;
+		line-height: 120%;
+		font-weight: 900;
+		margin: 0;
+		margin-bottom: 40px;
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 36px;
+		&-inner {
+			display: flex;
+			flex-direction: column;
+			row-gap: 4px;
+			.part__item-inner:first-child {
+				margin-top: 12px;
+			}
+		}
+	}
+	&__item {
+		grid-column: 4 span;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		row-gap: 12px;
+		border-radius: 40px;
+		padding: 30px;
+		padding-top: 20px;
+		&-first {
+			background: var(--violet-color);
+		}
+		&-second {
+			background: var(--dark-violet-color);
+		}
+		&-third {
+			background: var(--dark-blue-color);
+		}
+		&-inner {
+			color: var(--white-color);
+			font-size: 15px;
+			line-height: 23px;
+		}
+	}
+	&__subtitle {
+		margin: 0;
+		color: var(--blue-color);
+		font-size: 25px;
+		line-height: 120%;
+		text-align: center;
+		min-height: 68px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+	&__price {
+		margin: 0;
+		margin-bottom: 26px;
+		font-size: 20px;
+		line-height: 120%;
+		color: var(--blue-color);
+		text-align: right;
+	}
+	&__text {
+		color: var(--white-color);
+		font-size: 15px;
+		line-height: 23px;
+		&-extra {
+			display: block;
+			margin-top: 20px;
+		}
+	}
+	&__button {
+		padding: 12px;
+		color: var(--white-color);
+		font-weight: 500;
+		font-size: 18px;
+		border-radius: 40px;
+		background: var(--blue-color);
+		margin-top: 30px;
+		&-disabled {
+			background: transparent;
+			border: 2px solid var(--blue-color);
+			cursor: not-allowed;
+			pointer-events: none;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.part {
+		&__title {
+			font-size: 42px;
+		}
+		&__item {
+			grid-column: 6 span;
+			&:last-child {
+				justify-self: center;
+				grid-column: 3 / 11;
+			}
+		}
+	}
+}
+
+@media (max-width: 590px) {
+	.part {
+		&__item {
+			grid-column: 2 / 10 span;
+			&:last-child {
+				grid-column: 2 / 10 span;
+			}
+		}
+		&__list {
+			column-gap: 0;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.part {
+		&__title {
+			font-size: 30px;
+		}
+	}
+}
+
+@media (max-width: 440px) {
+	.part {
+		&__item {
+			grid-column: 12 span;
+			&:last-child {
+				grid-column: 12 span;
+			}
+		}
+	}
+}

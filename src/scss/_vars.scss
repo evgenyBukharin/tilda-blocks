@@ -1,7 +1,7 @@
 :root {
 	// base
 	--font-family: "TTNorms", sans-serif;
-	--content-width: 1480px;
+	--content-width: 910px;
 	--container-offset: 20px;
 	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
@@ -10,4 +10,7 @@
 	--black-color: #323232;
 	--purple-color: #372382;
 	--violet-color: #a21381;
+	--blue-color: #00e1ff;
+	--dark-blue-color: #302481;
+	--dark-violet-color: #741a84;
 }
