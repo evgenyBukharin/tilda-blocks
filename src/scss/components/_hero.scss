@@ -62,10 +62,10 @@
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
 	.hero {
 		&__title {
-			font-weight: 700;
+			font-size: 30px;
 		}
 		&__number {
 			font-size: 48px;
